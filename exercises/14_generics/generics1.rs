@@ -6,11 +6,11 @@ fn main() {
     // TODO: Fix the compiler error by annotating the type of the vector
     // `Vec<T>`. Choose `T` as some integer type that can be created from
     // `u8` and `i8`.
-    let mut numbers = Vec::new();
+    let mut numbers: Vec<i32> = Vec::new();
 
     // Don't change the lines below.
     let n1: u8 = 42;
-    numbers.push(n1.into());
+    numbers.push(n1.into());  // Vec is defined as i32, so when we do numbers.push(), it expects an i32; therefore the compiler knows into() must convert to i32
     let n2: i8 = -1;
     numbers.push(n2.into());
 
